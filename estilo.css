@@ -304,6 +304,14 @@ html{
     100%{width: 25%;}
 }
 
+.skills .skill .python{
+    width: 0;
+    animation: 2s python forwards;
+}
+@keyframes python {
+    0%{width: 0%;}
+    100%{width: 20%;}
+}
 .skills .skill .photoshop{
     width: 0;
     animation: 2s photoshop forwards;
