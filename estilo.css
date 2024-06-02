@@ -312,11 +312,11 @@ html{
     0%{width: 0%;}
     100%{width: 20%;}
 }
-.skills .skill .photoshop{
+.skills .skill .php{
     width: 0;
     animation: 2s photoshop forwards;
 }
-@keyframes photoshop {
+@keyframes php {
     0%{width: 0%;}
     100%{width: 20%;}
 }
