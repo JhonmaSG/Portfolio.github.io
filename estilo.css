@@ -45,6 +45,10 @@ nav a:hover {
   line-height: 1.6;
 }
 
+.relative {
+    padding-top: 75px;
+}
+
 /* BOTONES */
 .btn {
   padding: 10px 20px;
