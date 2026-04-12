@@ -1,361 +1,305 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jhon Serrano | Full Stack Developer</title>
+  <meta name="description" content="Desarrollador de software enfocado en backend, bases de datos e inteligencia artificial. Portfolio profesional actualizado 2026.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.05);
+    }
+  </style>
 </head>
 
-<body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="#">Jhonma SG</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
-                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
+<body class="bg-slate-900 text-gray-200">
+
+<!-- NAV -->
+<nav class="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur border-b border-slate-700">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-xl font-bold text-cyan-400">JHONMA SG</h1>
+
+    <ul class="hidden md:flex gap-6 text-sm">
+      <li><a href="#inicio" class="hover:text-cyan-400">Inicio</a></li>
+      <li><a href="#sobremi" class="hover:text-cyan-400">Sobre mí</a></li>
+      <li><a href="#skills" class="hover:text-cyan-400">Skills</a></li>
+      <li><a href="#cv" class="hover:text-cyan-400">CV</a></li>
+      <li><a href="#portfolio" class="hover:text-cyan-400">Portfolio</a></li>
+      <li><a href="#contacto" class="hover:text-cyan-400">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="h-[80vh] flex items-center justify-center px-6">
+
+  <div class="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- FOTO -->
+    <div class="flex justify-center">
+      <div class="relative">
+        <img src="img/JhonAura2.png"
+     class="w-44 h-44 md:w-64 md:h-64 rounded-full mx-auto border-4 border-cyan-400 object-cover shadow-lg">
+
+        <!-- glow decorativo -->
+        <div class="absolute -inset-2 bg-cyan-400/10 blur-2xl rounded-2xl"></div>
+      </div>
     </div>
 
-    <!-- SECCION INICIO -->
-    <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img class="photoCircle" src="img/PerfilDef.png" alt="">
-            </div>
-            <h1>Jhon Serrano</h1>
-            <h2>Desarrollador de Software</h2>
-            <!-- REDES SOCIALES -->
-            <div class="redes">
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://github.com/JhonmaSG" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/jhon-serrano-23b685283/" target="_blank"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa-solid fa-rss"></i></a>
-            </div>
-        </div>
-    </section>
+    <!-- TEXTO -->
+    <div class="space-y-4 text-center md:text-left">
 
-    <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi">
-        <div class="contenido-seccion">
-            <h2>Sobre Mí</h2>
-            <p><span>Hola, soy Jhon Serrano.</span> Estudiante de programación de la universidad Distrital Francisco
-                José de Caldas, estoy cursando el cuarto semestre en la carrera de sistematización de datos y tengo 1
-                año de experiencia como programador. He realizado proyectos universitarios y personales en el área de
-                programación web, java y bases de datos. Poseo habilidades de lógica que destacan en la programación
-                orientada a objetos, diseño llamativo en las diferentes formas de presentación de páginas web y
-                aplicaciones en java para modelos de negocio.
-                Si quieres podemos trabajar juntos para hacer realidad tu página o proyecto en común.
+      <h1 class="text-4xl md:text-6xl font-bold">
+        Jhon Mario Serrano
+      </h1>
 
-            </p>
+      <h2 class="text-cyan-400 text-xl md:text-2xl">
+        Desarrollador de Software | Fullstack
+      </h2>
 
-            <div class="fila">
-                <!-- DATOS PERSONALES -->
-                <div class="col">
-                    <h3>Datos Personales</h3>
-                    <ul>
-                        <li>
-                            <strong>Cumpleaños</strong>
-                            10-1996
-                        </li>
-                        <li>
-                            <strong>Teléfono</strong>
-                            +57 xxx xxxx xxx
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            jmsgproyect@gmail.com
-                        </li>
-                        <li>
-                            <strong>Website</strong>
-                            En Construcción
-                        </li>
-                        <li>
-                            <strong>Dirección</strong>
-                            Bogotá, Colombia
-                        </li>
-                        <li>
-                            <strong>Cargo</strong>
-                            <span>Desarrollador de Software</span>
-                        </li>
-                    </ul>
-                </div>
-                <!-- INTERESES -->
-                <div class="col">
-                    <h3>Intereses</h3>
-                    <div class="contenedor-intereses">
+      <p class="max-w-4xl mx-auto md:mx-0 text-gray-400 leading-relaxed">
+        Desarrollador de Software graduado de la Universidad Francisco José de Caldas, con más de un año de experiencia sólida en el desarrollo de aplicaciones y gestión de bases de datos. Especializado en Oracle, MySQL, Java, PHP, C# .NET y Python.
+      </p>
 
-                        <div class="interes">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <span>JUEGOS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-headphones"></i>
-                            <span>MUSICA</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-plane"></i>
-                            <span>VIAJAR</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-book"></i>
-                            <span>LIBROS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-person-walking"></i>
-                            <span>DEPORTE</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-rocket"></i>
-                            <span>UNIVERSO</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-camera"></i>
-                            <span>FOTOS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-plate-wheat"></i>
-                            <span>COMIDA</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button>
-                Descargar CV <i class="fa-solid fa-download"></i>
-                <span class="overlay"></span>
-            </button>
-        </div>
-    </section>
-
-    <!-- SECCION CURRICULUM -->
-    <section id="curriculum" class="curriculum">
-        <div class="contenido-seccion">
-            <h2>Curriculum</h2>
-            <div class="fila">
-                <div class="col izquierda">
-                    <h3>Educación</h3>
-                    <div class="item izq">
-                        <h4>Sistematización de Datos</h4>
-                        <span class="casa">Universidad Francisco Jose de Caldas</span>
-                        <span class="fecha">2022 - 2025</span>
-                        <p>La Universidad Distrital Francisco José de Caldas ofrece la carrera de Sistematización de Datos, destacada por su enfoque en la recolección, análisis e interpretación de datos. Este programa combina estadística, informática e inteligencia artificial para preparar profesionales capaces de optimizar la toma de decisiones. Los egresados pueden diseñar y gestionar sistemas de información en diversas organizaciones, con una sólida base ética y un enfoque en la innovación tecnológica.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-        <div class="contenido-seccion">
-            <h2>PORTFOLIO</h2>
-            <div class="galeria">
-                <div class="proyecto">
-                    <img src="img/SistemaWeb4.png" alt="" class="tamImgProyect" size="100">
-                    <div class="overlay">
-                        <a href="https://www.dropbox.com/scl/fo/dh28an7ulyew2sse7tu7k/h?rlkey=mrsf09r9qixro00hdmdtpwoeh&st=z5ohoadw&dl=0" target="_blank" rel="noopener noreferrer">
-                            <h3>Pagina de compras</h3>
-                            <p>Java JSP</p>
-                            <p>SQL</p>
-                            <p>HTML</p>
-                            <p>BOOTSTRAP</p>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="proyecto">
-                    <img src="img/biblioteca1.png" alt="">
-                    <div class="overlay">
-                        <a href="https://www.dropbox.com/scl/fo/pa6njvrptmkgfls741at0/AL_QRUeDlYU7mk4a4pE9nec?rlkey=fbuhmd1fip99p4a5o0ayu15on&st=0ywt2sdo&dl=0" target="_blank" rel="noopener noreferrer">
-                            <h3>Biblioteca Alejandria</h3>
-                            <p>PHP</p>
-                            <p>SQL</p>
-                            <p>HTML</p>
-                            <p>BOOTSTRAP</p>
-                            <p>JAVASCRIPT</p>
-                        </a>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCION SKILLS -->
-    <section class="skills" id="skills">
-        <div class="contenido-seccion">
-            <h2>Skills</h2>
-            <div class="fila">
-                <!-- Technical Skill -->
-                <div class="col">
-                    <h3>Technical Skills</h3>
-                    <div class="skill">
-                        <span>Javascript</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>45%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>HTML & CSS</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>70%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>JAVA</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>60%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Python</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>35%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Php</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>45%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Professional Skills -->
-                <div class="col">
-                    <h3>Professional Skills</h3>
-                    <div class="skill">
-                        <span>Trabajo en Equipo</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>100%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Creatividad</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>100%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Dedicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>100%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Proyect Management</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>100%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
-            <h2>CONTACTO</h2>
-            <div class="fila">
-                <!-- Formulario -->
-                <div class="col">
-                    <input type="text" placeholder="Tu Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div>
-                <!-- Mapa -->
-                <div class="col">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.5164107565!2d-74.2478938043006!3d4.648283717342738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1688777491613!5m2!1ses!2sco"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                Colombia, Bogota.
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                +57 xxx xxxx xxx
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>
-                                Email: jmsgproyect@gmail.com
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
+      <div class="flex gap-4 justify-center md:justify-start">
+        <a href="#portfolio" class="bg-cyan-400 text-slate-900 px-6 py-2 rounded-lg font-semibold hover:scale-105 transition">
+          Ver proyectos
         </a>
-        <div class="redes">
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- SOBRE MI -->
+<section id="sobremi" class="py-20 max-w-6xl mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Sobre mí</h2>
+
+  <div class="grid md:grid-cols-2 gap-10 text-gray-400 leading-relaxed">
+
+    <p>
+      Soy Desarrollador de Software graduado de la Universidad Francisco José de Caldas, apasionado por crear soluciones eficientes y optimizar procesos mediante tecnología. Con más de un año de experiencia práctica, me he especializado en el diseño, desarrollo y mantenimiento de bases de datos Oracle y relacionales (PL/SQL y MySQL), además de trabajar con lenguajes como Java, PHP (5 y 8), C# .NET y Python. Utilizo herramientas de Inteligencia Artificial, especialmente GitHub Copilot, para acelerar el desarrollo y mejorar la calidad del código.
+    </p>
+
+    <p>
+      Me caracterizo por mi fuerte capacidad de análisis de problemas, organización y trabajo en equipo. Disfruto enfrentando nuevos retos y estoy actualmente profundizando en Node.js con Express, React y AWS para consolidarme como desarrollador Full Stack y poder participar en proyectos más escalables y modernos. Siempre en constante aprendizaje, busco aportar valor a través de código limpio, eficiente y soluciones innovadoras.
+    </p>
+
+  </div>
+</section>
+
+<section id="skills" class="py-20 bg-slate-800">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- PROGRAMACIÓN -->
+      <div class="bg-slate-900 p-6 rounded-xl">
+        <h3 class="text-cyan-400 text-xl font-semibold mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-code"></i> Lenguajes de Programación
+        </h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="badge"><i class="fa-brands fa-java"></i> Java</span>
+          <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="badge"><i class="fa-brands fa-php"></i> PHP</span>
+          <span class="badge"><i class="fa-solid fa-c"></i> C#</span>
+          <span class="badge"><i class="fa-brands fa-js"></i> JavaScript</span>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- BASE DE DATOS -->
+      <div class="bg-slate-900 p-6 rounded-xl">
+        <h3 class="text-cyan-400 text-xl font-semibold mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-database"></i> Bases de Datos
+        </h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="badge"><i class="fa-solid fa-database"></i> Oracle PL/SQL</span>
+          <span class="badge"><i class="fa-solid fa-database"></i> MySQL</span>
+        </div>
+      </div>
+
+      <!-- BACKEND -->
+      <div class="bg-slate-900 p-6 rounded-xl">
+        <h3 class="text-cyan-400 text-xl font-semibold mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-server"></i> Frameworks
+        </h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="badge"><i class="fa-solid fa-c"></i> .NET Framework</span>
+          <span class="badge"><i class="fa-solid fa-c"></i> ASP.NET</span>
+          <span class="badge"><i class="fa-brands fa-node"></i> Node.js with Express</span>
+          <span class="badge"><i class="fa-brands fa-react"></i> React</span>
+          <span class="badge"><i class="fa-solid fa-gears"></i> APIs REST</span>
+        </div>
+      </div>
+
+      <!-- HERRAMIENTAS -->
+      <div class="bg-slate-900 p-6 rounded-xl">
+        <h3 class="text-cyan-400 text-xl font-semibold mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-screwdriver-wrench"></i> Herramientas & Cloud
+        </h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
+          <span class="badge"><i class="fa-brands fa-aws"></i> AWS</span>
+          <span class="badge"><i class="fa-solid fa-robot"></i> IA / Python</span>
+          <span class="badge"><i class="fa-solid fa-robot"></i> Copilot</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv" class="py-20 max-w-6xl mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Curriculum</h2>
+
+  <div class="border-l border-cyan-400 pl-6 space-y-8">
+
+    <div>
+      <h3 class="text-xl font-semibold">Tecnología en Sistematización de Datos</h3>
+      <p class="text-cyan-400">Universidad Distrital Francisco José de Caldas</p>
+      <p class="text-gray-400">Organizar, gestionar y optimizar datos y sistemas informáticos de forma integral. Con fuerte énfasis en programación, bases de datos, redes y herramientas modernas como IA, te prepara para trabajar en desarrollo de software, administración de datos, soporte TI y emprendimiento tecnológico.</p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-semibold">Experiencia en Desarrollo</h3>
+      <p class="text-gray-400">
+        +1 año desarrollo y mantenimiento de aplicaciones, con énfasis en bases de datos Oracle y relacionales (PL/SQL y MySQL). Ha trabajado con tecnologías backend como Java 1.7, PHP (5 y 8), C# .NET Framework 4.8 y .NET 5+, además de Python para automatización e inteligencia artificial (incluyendo GitHub Copilot).
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-24 bg-slate-800">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-center mb-6">Portafolio</h2>
+
+    <!-- FILTER BAR -->
+    <div class="flex justify-center gap-3 mb-10 flex-wrap">
+      <button class="filter-btn active" data-filter="all">Todo</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="database">Database</button>
+      <button class="filter-btn" data-filter="ai">IA</button>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- PROJECT #1-->
+      <div class="project-card" data-category="backend database">
+
+        <img src="img/SistemaWeb4.png" class="project-img">
+
+        <div class="p-5 space-y-3">
+          <h3 class="text-lg font-semibold">Sistema de Compras</h3>
+
+          <p class="text-gray-400 text-sm">
+            Arquitectura backend con Java JSP + SQL para gestión de transacciones.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="badge"><i class="fa-brands fa-java"></i> Java</span>
+            <span class="badge"><i class="fa-solid fa-database"></i> SQL</span>
+            <span class="badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+            <span class="badge">Backend</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT #2-->
+      <div class="project-card" data-category="backend database">
+
+        <img src="img/biblioteca1.png" class="project-img">
+
+        <div class="p-5 space-y-3">
+          <h3 class="text-lg font-semibold">Biblioteca Alejandría</h3>
+
+          <p class="text-gray-400 text-sm">
+            Sistema web con PHP + MySQL orientado a gestión de inventario.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="badge"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="badge"><i class="fa-solid fa-database"></i> MySQL</span>
+            <span class="badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+            <span class="badge">Web App</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT #3-->
+      <div class="project-card" data-category="backend database">
+
+        <img src="img/ConverterYT.png" class="project-img">
+
+        <div class="p-5 space-y-3">
+          <h3 class="text-lg font-semibold">Converter TY Music</h3>
+
+          <p class="text-gray-400 text-sm">
+            Herramienta para convertir videos de YouTube a formatos de audio (MP3).
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="badge"><i class="fa-brands fa-node"></i> Node.js</span>
+            <span class="badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+            <span class="badge">Web App</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-20 max-w-2xl mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Contacto</h2>
+
+  <form id="form" class="space-y-4">
+    <input type="text" placeholder="Nombre" class="w-full p-3 bg-slate-800 rounded" required>
+    <input type="email" placeholder="Email" class="w-full p-3 bg-slate-800 rounded" required>
+    <textarea placeholder="Mensaje" class="w-full p-3 bg-slate-800 rounded"></textarea>
+
+    <button class="bg-cyan-400 text-slate-900 px-6 py-2 rounded w-full font-semibold btn-sendMessage">
+      Enviar mensaje
+    </button>
+  </form>
+
+  <div class="flex justify-center gap-6 mt-6 text-xl">
+    <a href="https://github.com/JhonmaSG"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:jmsgproyect@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 border-t border-slate-700 text-gray-400">
+  © 2026 Jhon Serrano — Full Stack Developer
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>

@@ -1,42 +1,47 @@
-let menuVisible = false;
-//Función Que culta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList = "";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList = "responsive";
-        menuVisible = true;
+// FAANG++ FILTER SYSTEM
+
+const buttons = document.querySelectorAll(".filter-btn");
+const projects = document.querySelectorAll(".project-card");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // active state
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+
+    projects.forEach(project => {
+      const categories = project.getAttribute("data-category");
+
+      if (filter === "all" || categories.includes(filter)) {
+        project.style.display = "block";
+      } else {
+        project.style.display = "none";
+      }
+    });
+
+  });
+});
+
+// Animación scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("opacity-100", "translate-y-0");
     }
-}
+  });
+});
 
-function seleccionar(){
-    //Se oculta el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}
+document.querySelectorAll("section").forEach(sec => {
+  sec.classList.add("opacity-0", "translate-y-10", "transition", "duration-700");
+  observer.observe(sec);
+});
 
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        //Seccion progreso de skills
-        let habilidades = document.getElementsByClassName("progreso");
-        //Ver css
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("java");
-        habilidades[3].classList.add("python");
-        habilidades[4].classList.add("php");
-        habilidades[5].classList.add("trabajo");
-        habilidades[6].classList.add("creatividad");
-        habilidades[7].classList.add("dedicacion");
-        habilidades[8].classList.add("proyect");
-    }
-}
+// Validación simple formulario
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Mensaje enviado correctamente 🚀");
+});
 
-//Se detecta el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-}
